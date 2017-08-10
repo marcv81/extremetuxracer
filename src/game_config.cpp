@@ -303,9 +303,7 @@ void InitConfig() {
 	if (!DirExists(param.config_dir.c_str())) {
 		mkdir(param.config_dir.c_str(), 0775);
         }
-	param.data_dir = ETR_DATA_DIR;
-	param.data_dir += SEP;
-	param.data_dir += "etr";
+	param.data_dir = "data";
         param.save_dir = param.config_dir;
 	param.configfile = param.config_dir + SEP "options.txt";
 	if (FileExists(param.configfile)) {
