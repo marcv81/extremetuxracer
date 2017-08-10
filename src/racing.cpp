@@ -150,9 +150,8 @@ void CRacing::Keyb(sf::Keyboard::Key key, bool release, int x, int y) {
 
 void CRacing::Jaxis(int axis, float value) {
 	if (axis == 0) { 	// left and right
-		stick_turn = ((value < -0.2) || (value > 0.2));
-		if (stick_turn) stick_turnfact = value;
-		else stick_turnfact = 0.0;
+		stick_turn = 1;
+		stick_turnfact = value;
 	} else if (axis == 1) {	// paddling and braking
 		stick_paddling = (value < -0.3);
 		stick_braking = (value > 0.3);
